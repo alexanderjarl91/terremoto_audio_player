@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terremoto</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="img/logo1.svg" alt="" />
+      <div class="themeSwitch">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </header>
+
+    <div class="middle">
+      <!-- start of menu -->
+      <nav class="navbar">
+        <div class="menuBtns">
+          <button id="allSongsBtn" class="menu-btn active">All songs</button>
+          <button id="likedSongsBtn" class="menu-btn">Liked songs</button>
+        </div>
+      </nav>
+
+      <!-- songlist container -->
+      <div class="container">
+        <div class="line"></div>
+        <div class="songList"></div>
+      </div>
+    </div>
+
+    <!-- ADD SONG BUTTON -->
+    <aside class="sidebar">
+      <input
+        type="file"
+        accept=".mp3, .wav, audio/*"
+        id="real-upload"
+        hidden="hidden"
+      />
+      <button id="addSongBtn">ADD SONG +</button>
+    </aside>
+
+    <div class="footer">
+      <div class="footer_content">
+        <div class="nowPlaying">
+          <img
+            class="nowPlayingImg"
+            id="currentCover"
+            src="img/no_song_cover.png"
+            alt=""
+          />
+          <div class="nowPlayingTxt">
+            <h3 id="artist">No song</h3>
+            <h4 id="title">playing</h4>
+          </div>
+        </div>
+        <div class="playBar">
+          <button class="back" id="playbarBtns">
+            <img src="img/backwards.svg" alt="" />
+          </button>
+
+          <button class="play" id="playbarBtns">
+            <img id="playBtnImg" src="img/play.svg" alt="" />
+          </button>
+          <button class="forward" id="playbarBtns">
+            <img src="img/forward.svg" alt="" />
+          </button>
+          <audio id="song" src=""></audio>
+        </div>
+      </div>
+    </div>
+    <script src="songlist.js"></script>
+  </body>
+</html>
